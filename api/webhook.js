@@ -91,11 +91,8 @@ module.exports = async function handler(req, res) {
       // Non-fatal — we can still proceed without client email
     }
 
-    // Step 2 — Find available slots
-    const { slots, clientCalendarChecked } = await findAvailableSlots(
-      internalEmails,
-      clientEmail
-    );
+    // Step 2 — Generate available slots based on business hours
+    const { slots, clientCalendarChecked } = await findAvailableSlots();
 
     if (slots.length === 0) {
       console.warn('No available slots found in window');

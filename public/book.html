@@ -305,9 +305,8 @@
             <span class="pill">
               <span>Video call</span>
             </span>
-            <span class="pill" id="calendar-pill">
-              <span class="pill-dot"></span>
-              <span>Times checked against team availability</span>
+            <span class="pill">
+              <span>11am – 6pm EST only</span>
             </span>
           </div>
         </div>
@@ -381,13 +380,6 @@
       document.getElementById('booking-ui').style.display = 'block';
 
       document.getElementById('project-label').textContent = sessionData.projectName;
-
-      // Calendar status pill
-      if (!sessionData.clientCalendarChecked) {
-        const pill = document.getElementById('calendar-pill');
-        pill.querySelector('.pill-dot').classList.add('amber');
-        pill.querySelector('span:last-child').textContent = 'Availability based on Narvar team';
-      }
 
       // Attendees note
       if (sessionData.internalNames && sessionData.internalNames.length) {

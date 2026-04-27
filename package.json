@@ -7,7 +7,6 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
-    "googleapis": "^144.0.0",
     "nodemailer": "^6.9.0",
     "uuid": "^9.0.0"
   },
